@@ -1,0 +1,19 @@
+{
+  "evento_1": {
+    "tags": [
+      {"nome": "amigos"},
+      {"nome": "conhecidos"}
+    ],
+    "convidados": [
+      {
+        "nome": "Ezequiel Bertti",
+        "email": "ebertti@gmail.com",
+        "telefone": "",
+        "facebook": "",
+        "tags": [
+          "amigos"
+        ]
+      }
+    ]
+  }
+}
