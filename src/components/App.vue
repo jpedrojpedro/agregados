@@ -30,11 +30,12 @@
 </template>
 
 <script>
-  import database from './firebase/database'
+  import database from '../firebase/database'
   export default {
     name: 'app',
     firebase: {
-      tags: database.ref('development')
+      // needs to get dynamically
+      tags: database.ref('development/evento-teste')
     },
     data () {
       return {
@@ -48,5 +49,5 @@
 
 <style lang="scss">
   // Import Main styles for this application
-  @import './scss/style';
+  @import '../scss/style';
 </style>
