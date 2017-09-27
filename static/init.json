@@ -6,7 +6,7 @@
       ],
       "convidados": [
         { "id": 1,
-          "name": "Ezequiel Bertti",
+          "nome": "Ezequiel Bertti",
           "email": "ebertti@gmail.com",
           "telefone": "(21)9999-9999",
           "facebook": "ebertti",
@@ -24,7 +24,7 @@
       ],
       "convidados": [
         { "id": 1,
-          "name": "Ezequiel Bertti",
+          "nome": "Ezequiel Bertti",
           "email": "ebertti@gmail.com",
           "telefone": "(21)9999-9999",
           "facebook": "ebertti",
@@ -33,7 +33,7 @@
           ]
         },
         { "id": 2,
-          "name": "Daniel Blando",
+          "nome": "Daniel Blando",
           "email": "daniel@blando.com.br",
           "telefone": "(21)9999-9999",
           "facebook": "daniel.blando.3",

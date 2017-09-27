@@ -37,7 +37,7 @@
           <th>Telefone</th>
         </tr>
         <tr v-for="guest in guests">
-          <td>{{ guest.name }}</td>
+          <td>{{ guest.nome }}</td>
           <td>{{ guest.email }}</td>
           <td>{{ guest.facebook }}</td>
           <td>{{ guest.telefone }}</td>
