@@ -7,13 +7,11 @@
     </div>
     <div class="row">
       <div class="col">
-        <form id="form" v-bind:action="event.name" class="form-inline">
-          <div class="form-group">
-            <label for="novoNome">jpedrojpedro.github.io/agregados/</label>&nbsp;
-            <input type="text" id="novoNome" class="form-control" v-model="event.name">&nbsp;
-            <input type="submit" class="btn btn-primary" value="Vai!">
-          </div>
-        </form>
+        <div class="form-inline">
+          <label for="novoNome">jpedrojpedro.github.io/agregados/</label>&nbsp;
+          <input type="text" id="novoNome" class="form-control" v-model="my_event.name">&nbsp;
+          <input type="submit" @click.pevent="perform()" class="btn btn-primary" value="Vai!">
+        </div>
       </div>
     </div>
     <div class="row">
@@ -36,9 +34,14 @@
     firebase: {
       tags: database.ref('development')
     },
+    methods: {
+      perform () {
+        console.log(this.my_event.name)
+      }
+    },
     data () {
       return {
-        event: {
+        my_event: {
           name: 'evento-teste'
         }
       }
