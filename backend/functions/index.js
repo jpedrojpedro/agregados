@@ -1,9 +1,16 @@
-const functions = require('firebase-functions');
+const functions = require('firebase-functions')
+const admin = require('firebase-admin')
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
+admin.initializeApp(functions.config().firebase)
 
-exports.helloWorld = functions.https.onRequest((request, response) => {
-  response.send('Hello from Firebase!');
+exports.addGuest = functions.https.onRequest((request, response) => {
+  let eventName = request.query.eventName
+  let convidados = admin.database().ref(`/development/${eventName}/convidados`)
+  convidados.push({
+    email: request.query.email,
+    facebook: request.query.facebook,
+    nome: request.query.nome,
+    telefone: request.query.telefone
+  })
+  response.send('Ok!')
 })
