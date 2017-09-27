@@ -1,17 +1,8 @@
 <template>
   <div id="app" class="container">
     <div class="row">
-      <div class="col">
-        <h1>AGREGADOS</h1>
-      </div>
-      <div class="col">
-        <h2>{{ name }}</h2>
-      </div>
-    </div>
-    <div class="row">
       <!-- list all names -->
     </div>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -21,12 +12,14 @@
     name: 'app',
     firebase: {
       // needs to get dynamically
-      tags: database.ref('development/evento-teste')
+      tags: database.ref('development/evento-teste/tags')
     },
     data () {
       return {
         event: {
-          name: ''
+          tags: [
+            ''
+          ]
         }
       }
     }
