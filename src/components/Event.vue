@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="row">
-      <table>
+      <table class="table">
         <tr>
           <th>Name</th>
           <th>Email</th>
