@@ -9,7 +9,7 @@
       <div class="col">
         <div class="form-inline">
           <label for="novoNome">jpedrojpedro.github.io/agregados/</label>&nbsp;
-          <input type="text" id="novoNome" class="form-control" v-model="my_event.name">&nbsp;
+          <input type="text" id="novoNome" class="form-control" v-model="myEvent.name">&nbsp;
           <input type="submit" @click.pevent="perform()" class="btn btn-primary" value="Vai!">
         </div>
       </div>
@@ -36,12 +36,15 @@
     },
     methods: {
       perform () {
-        console.log(this.my_event.name)
+        this.$router.push({
+          name: 'Event',
+          params: { 'event_name': this.myEvent.name }
+        })
       }
     },
     data () {
       return {
-        my_event: {
+        myEvent: {
           name: 'evento-teste'
         }
       }
