@@ -1,11 +1,3 @@
-<template>
-  <div id="app" class="container">
-    <div class="row">
-      <!-- list all names -->
-    </div>
-  </div>
-</template>
-
 <script>
   import database from '../firebase/database'
   export default {
@@ -26,7 +18,8 @@
   }
 </script>
 
-<style lang="scss">
-  // Import Main styles for this application
-  @import '../scss/style';
-</style>
+<template>
+  <div class="row">
+    <!-- list all names -->
+  </div>
+</template>

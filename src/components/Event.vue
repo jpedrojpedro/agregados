@@ -1,39 +1,49 @@
-<template>
-  <div id="app" class="container">
-    <div class="row">
-      <div class="col">
-        <h1>AGREGADOS</h1>
-      </div>
-      <div class="col">
-        <h2>{{ name }}</h2>
-      </div>
-    </div>
-    <div class="row">
-      <!-- list all names -->
-    </div>
-    <router-view></router-view>
-  </div>
-</template>
-
 <script>
   import database from '../firebase/database'
   export default {
     name: 'app',
-    firebase: {
-      // needs to get dynamically
-      tags: database.ref('development/evento-teste')
+    firebase () {
+      return {
+        guests: database.ref('development' + this.event.name + '/convidados'),
+        tags: database.ref('development' + this.event.name + '/tags')
+      }
     },
     data () {
       return {
         event: {
-          name: ''
+          name: this.$route.path
         }
       }
     }
   }
 </script>
 
-<style lang="scss">
-  // Import Main styles for this application
-  @import '../scss/style';
-</style>
+<template>
+  <div>
+    <div class="row">
+      <div class="col">
+        <h1>AGREGADOS</h1>
+      </div>
+      <div class="col">
+        <h2>Lista: {{ event.name }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Facebook</th>
+          <th>Telefone</th>
+        </tr>
+        <tr v-for="guest in guests">
+          <td>{{ guest.name }}</td>
+          <td>{{ guest.email }}</td>
+          <td>{{ guest.facebook }}</td>
+          <td>{{ guest.telefone }}</td>
+        </tr>
+      </table>
+    </div>
+    <router-view></router-view>
+  </div>
+</template>
