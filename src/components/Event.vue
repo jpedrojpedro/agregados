@@ -19,7 +19,8 @@
   export default {
     name: 'app',
     firebase: {
-      tags: database.ref('development')
+      // needs to get dynamically
+      tags: database.ref('development/evento-teste')
     },
     data () {
       return {

@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <form id="form" class="form-inline">
+        <form id="form" v-bind:action="event.name" class="form-inline">
           <div class="form-group">
             <label for="novoNome">jpedrojpedro.github.io/agregados/</label>&nbsp;
             <input type="text" id="novoNome" class="form-control" v-model="event.name">&nbsp;
@@ -34,13 +34,12 @@
   export default {
     name: 'app',
     firebase: {
-      // needs to get dynamically
-      tags: database.ref('development/evento-teste')
+      tags: database.ref('development')
     },
     data () {
       return {
         event: {
-          name: ''
+          name: 'evento-teste'
         }
       }
     }
