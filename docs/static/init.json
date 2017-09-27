@@ -1,19 +1,47 @@
 {
-  "evento_1": {
-    "tags": [
-      {"nome": "amigos"},
-      {"nome": "conhecidos"}
-    ],
-    "convidados": [
-      {
-        "nome": "Ezequiel Bertti",
-        "email": "ebertti@gmail.com",
-        "telefone": "",
-        "facebook": "",
-        "tags": [
-          "amigos"
-        ]
-      }
-    ]
+  "development": {
+    "evento-teste": {
+      "tags": [
+        "amigos", "conhecidos", "penetras"
+      ],
+      "convidados": [
+        { "id": 1,
+          "name": "Ezequiel Bertti",
+          "email": "ebertti@gmail.com",
+          "telefone": "(21)9999-9999",
+          "facebook": "ebertti",
+          "tags": [
+            "amigos"
+          ]
+        }
+      ]
+    }
+  },
+  "production": {
+    "aniversario-jp-2017": {
+      "tags": [
+        "amigos", "agregados"
+      ],
+      "convidados": [
+        { "id": 1,
+          "name": "Ezequiel Bertti",
+          "email": "ebertti@gmail.com",
+          "telefone": "(21)9999-9999",
+          "facebook": "ebertti",
+          "tags": [
+            "amigos"
+          ]
+        },
+        { "id": 2,
+          "name": "Daniel Blando",
+          "email": "daniel@blando.com.br",
+          "telefone": "(21)9999-9999",
+          "facebook": "daniel.blando.3",
+          "tags": [
+            "amigos"
+          ]
+        }
+      ]
+    }
   }
 }
